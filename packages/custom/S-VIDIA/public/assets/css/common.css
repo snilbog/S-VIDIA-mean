@@ -1,0 +1,851 @@
+.menuBardemoBasicUsage .page-container {
+  padding: 32px; }
+
+.menuBardemoBasicUsage .page {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 680px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+
+.menuBardemoBasicUsage .page h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  font-weight: normal; }
+
+.menuBardemoBasicUsage .page p {
+  line-height: 1.6rem; }
+
+
+._md-nav-bar-list {
+  background-color: #000000;
+}
+
+md-nav-bar.md-default-theme md-nav-ink-bar, md-nav-bar md-nav-ink-bar {
+    background: #f8a10f;
+    color: #f8a10f;
+}
+
+.md-button.md-default-theme.md-accent, .md-button.md-accent {
+  color: #f8a10f !important;
+}
+
+html {
+	min-height: 100%;
+}
+
+.bgMain { 
+  background: #f2f2f2; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#ffffff, #f2f2f2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffffff, #f2f2f2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffffff, #f2f2f2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffffff, #f2f2f2); /* Standard syntax */
+}
+.S-Logo {
+  height: 80%
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+    background-color: #000000;
+    color: #f8a10f;
+    height: 20px;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) a {
+    background-color: #000000;
+    color: #f8a10f;
+}
+
+.icon-bar {
+	background-color: #ffffff;
+}
+.md-toolbar-tools {
+	font-size: 15px !important;
+}
+
+.md-button {
+  margin: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.white {
+	color:#ffffff;
+}
+
+.orange {
+	color: orange;
+}
+
+.black {
+	color: #000000;
+}
+
+.bg-black {
+	background-color: #000000;
+}
+
+.bg-body {
+ background:  -webkit-linear-gradient(bottom, rgba(248,44,15,0), rgba(248,161,15,1)),
+    url(/meanStarter/assets/img/carbon.png);
+  background-color: #000000;
+}
+
+  /*index page button*/
+.btn1 {
+  background-color:black;
+  border: none;
+  color: white;
+  height: 40px !important;
+  margin-top: 5px;
+  text-align: center;
+  width: 250px !important;
+}
+
+.logoStyle {
+  max-height: 50px; 
+  max-width: 50px; 
+  padding-left: 5px;
+  padding-top: 5px;  
+}
+
+.logoStyle2 {
+  max-height: 50px; 
+  max-width: 50px; 
+  padding-top: 5px;
+}
+
+.myNavbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar .hideLogo{
+  background-color: #000000 !important;
+  border: 0;
+  border-radius: 0;
+  color: #f8a10f;
+  font-family: "Segoe UI", "Verdana Ref", sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 4px;
+  line-height: 1.42857143 !important;
+  margin-bottom: 0;
+  padding-right: 5px !important;
+  z-index: 9999;
+}
+
+.jumbotron {
+  border-radius: 0px;
+  color: #000000;
+  font-family: "Segoe UI", "Verdana Ref", sans-serif;
+  margin-bottom: 0px !important;
+}
+
+/* temp hover button index page*/
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button {
+  border-radius: 05px;
+  border: 0 none;
+  display: inline-block;
+  margin-top: 5px;
+  margin: 1em;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 14px;
+  position: relative;
+  text-decoration: none;
+  width: 250px;
+}
+
+.button span {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.button:before,
+.button:after {
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 0.67em;
+  width: 100%;
+  -webkit-transition: .4s,opacity .6s;
+  -moz-transition: .4s,opacity .6s;
+  -o-transition: .4s,opacity .6s;
+  transition: .4s,opacity .6s;
+}
+
+/* :before */
+.button:before {
+  content: attr(data-hover);
+  -webkit-transform: translate(-150%,0);
+  -moz-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  -o-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+/* :after */
+.button:after {
+  content: attr(data-active);
+  -webkit-transform: translate(150%,0);
+  -moz-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  -o-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+/* Span on :hover and :active */
+.button:hover span,
+.button:active span {
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+/*  
+    We show :before pseudo-element on :hover 
+    and :after pseudo-element on :active 
+*/
+.button:hover:before,
+.button:active:after {
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  transition-delay: .4s;
+}
+/* 
+  We hide :before pseudo-element on :active
+*/
+.button:active:before {
+  -webkit-transform: translate(-150%,0);
+  -moz-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  -o-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/*------------------- end index hover ------------------------------------*/
+
+body {
+  background: url(/meanStarter/assets/img/bglight.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.logoStyle {
+  max-height: 50px; 
+  max-width: 50px;
+  padding-left: 5px;
+  padding-top: 5px;
+   
+}
+
+.logoStyle2 {
+  max-height: 50px; 
+  max-width: 50px; 
+  padding-top: 5px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.indexSize {
+  height: 100%;
+  width: 100%;
+}
+
+.hr {
+  border: 0;
+  border-top: 1px solid grey;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.btn-warning {
+	background-color: #f8a10f !important;
+  color: black !important;
+}
+
+.centerBtn {
+  float: none;
+  margin: auto;
+  text-align: center;
+}
+
+.fa {
+  padding-top: 3px;
+}
+
+.Justy {
+  text-align: justify;
+}
+
+.lefty {
+  text-align: left;
+}
+
+.respImg {
+  height: auto;
+  max-width: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.colPad {
+    padding: 30px 10px 15px 10px;
+}
+
+.white {
+  color: white;
+}
+
+.white a:hover {
+  color: #f8a10f;
+  text-decoration: none;
+}
+
+.orange {
+  color: #f8a10f;
+}
+
+.orange a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.orange2 a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.black {
+  color: black;
+}
+
+.black a:hover {
+  color: #f8a10f;
+  text-decoration: none;
+}
+
+.marTop {
+  margin-top: 0px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo-small {
+  color: #f8a10f;
+  font-size: 50px;
+}
+
+.logo {
+  color: #f8a10f;
+  font-size: 200px;
+}
+
+.proImg {
+  max-height:70px;
+  max-width:48px;
+}
+
+.thumbnail {
+  border: none;
+  border-radius: 0;
+  padding: 0 0 15px 0;
+}
+
+.thumbnail img {
+  height: 100%;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.item h4 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.375em;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+
+.panel {
+  border: 1px solid #f8a10f;
+  border-radius:0 !important;
+  transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.panel-footer .btn:hover {
+  background-color: #fff !important;
+  border: 1px solid #f8a10f;
+  color: #f8a10f;
+}
+
+.panel-heading {
+  background-color: #f8a10f !important;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #fff !important;
+  padding: 25px;
+}
+
+.panel-footer {
+  background-color: white !important;
+}
+
+.panel-footer h3 {
+  font-size: 32px;
+}
+
+.panel-footer h4 {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.panel-footer .btn {
+  background-color:#f8a10f;
+  color: #fff;
+  margin: 15px 0;
+}
+footer .glyphicon {
+  color: #f8a10f;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.slideanim {
+  visibility:hidden;
+}
+
+.slide {
+  animation-duration: 1s;
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+    }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    }
+  }
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+    }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    }
+}
+ /*home page computer button*/
+.btn2 {
+  border-radius: 05px;
+  height: 35px;
+  margin: 10px 10px 10px 10px;
+  width: 190px;
+}
+
+  /*mobile client page button*/
+.btn3 {
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px !important; 
+  width: 170px;
+}
+
+.mobileBtn1 {
+  margin: 0;
+  padding: 0;
+  width: 321px;
+}
+
+.mobileBtn2 {
+  padding: 20px;
+}
+
+  /*home page mobile button*/
+.lg { 
+  border-radius: 5px;
+  color: black;
+  height: 35px;
+  width: 190px;
+  
+}
+
+.btn-txt {
+  color: black;
+  font-family: "Segoe UI", "Verdana Ref", sans-serif !important;
+  padding-right: 12px;
+  
+}
+
+.recHeight {
+  height: 290px;
+}
+.glyphicon {
+  padding-left: 0px;
+}
+
+.smfnt {
+  font-size: 9px;
+}
+
+/*coming soon img*/
+div.ex1 {
+  
+  background: url(/meanStarter/assets/img/coming.png);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: 50% 50%;
+  height: 500px;
+  margin: auto;
+  width: fill;
+}
+
+.fitBox {
+  height: 210px;
+  width: 210px;
+}
+
+.flex-item {
+ justify-content: center;
+}
+
+.faq_question {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+.faq_answer_container {
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+  /*------------------------   accordion  ----------------------------------*/
+.panel-title {
+  color: black !important;
+}
+
+.panel-heading{
+  padding: 0;
+}
+
+.panel-title a{
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%; 
+   
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+
+td, th { 
+  border: 1px solid #ccc;
+  padding: 6px; 
+  text-align: left; 
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+  }
+  
+  tr { border: 1px solid #ccc; }
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    text-align: center;
+  }
+  
+  td:before { 
+    /* Top/left values mimic padding */
+    left: 6px;
+    padding-right: 10px; 
+    /* Now like a table header */
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+    width: 45%;
+  }
+}
+
+/*----------------header -------homeSys and busSys-------*/
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(/meanStarter/assets/img/new-cube.png);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+  color: rgba(255,255,255,.7);
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 50px;
+    
+    
+}
+/* -----------------------close header ----------------------------*/
+
+.bg-primary {
+    background-color: #f8a10f !important;
+}
+
+.bg-dark {
+  background-color: #222;
+  color: #fff;
+   
+}
+
+.text-faded {
+    color: rgba(255,255,255,.7);
+}
+
+.bg-all {
+	background-image: url(/meanStarter/assets/img/allsvidia.png);
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: #fff;
+  min-height: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.bg-all-content {
+  height: 750px;
+  padding: 100px 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/*          parallax scrolling      */
+.parallax {
+  background-attachment: fixed;
+  background-image: url(/meanStarter/assets/img/new-cube.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+}
+/*             end parallax             */
+
+
+.col-container {
+    display: table !important;
+    width: 100% !important;
+}
+.col {
+    display: table-cell !important;
+    padding: 10px !important;
+}
+@media only screen and (max-width: 760px) {
+    .col { 
+        display: block !important;
+        width: 100% !important;
+  }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+}
+
+/*.myBtn {
+    box-shadow: 0 3px 0 0 #b27700;
+    display: none; /* Hidden by default */
+/*    position: fixed; /* Fixed/sticky position */
+ /*   bottom: 40px; /* Place the button at the bottom of the page */
+/*    right: 30px; /* Place the button 30px from the left */
+/*    z-index: 99; /* Make sure it does not overlap */
+/*    border: none; /* Remove borders */
+/*    outline: none; /* Remove outline */
+/*    background-color: #f8a10f !important; /* Set a background color */
+/*    color: black; /* Text color */
+/*    cursor: pointer; /* Add a mouse pointer on hover */
+/*    padding-bottom: 8px;
+    padding-left: 6px !important; /* Some padding */
+ /*   border-radius: 35px; /* Rounded corners */
+ /*   height: 40px;
+    width: 40px;
+}*/
+
+/*.myBtn:hover {
+    background-color: #ffbb32;  /* Add a background on hover */
+/*}*/
+
+/*.myBtn:active, #myBtn.active {
+  background: #b27700;
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+}
+
+.goToTop {
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    bottom: 40;
+    right: 40;
+    z-index: 100000;
+    cursor: pointer;
+    margin: 10px;
+    -moz-opacity: 0.60;
+    opacity: .60;
+    filter: alpha(opacity=60);
+}*/

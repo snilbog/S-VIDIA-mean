@@ -1,0 +1,114 @@
+<md-content class="body container" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <div id="home" class="jumbotron bg-body containter">
+    <div class="center text-center">
+      <img src="/meanStarter/assets/img/s-logo.png" alt="">
+    <p class="white">Software Downloads </p>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-grey text-center">
+        <h3>Software Downloads</h3><br>
+  		  <p>S&#x2011;VIDIA provides free software updates for all product levels.<br> We never stop working to make our software more effiient and featurefull.</p><hr>
+
+  <div class="row">
+      <h3>Mobile Client Software</h3>
+      <div class="col-sm-6">
+       <a href="https://play.google.com/store/apps/details?id=com.svidia.nvclient&hl=en" target="_blank"><img src="/meanStarter/assets/img/google-play-badge.png" class="mobileBtn1" alt="Google Badge">
+       </a>      
+     </div>
+      <div class="col-sm-6">
+        <a href="https://itunes.apple.com/us/app/svidia-vclient/id955156423?ls=1&mt=8" target="_blank"><img src="/meanStarter/assets/img/App_Store_Badge.png" class="mobileBtn2" alt="Apple Badge"></a>
+      </div>
+      
+    </div>
+    <hr>
+    <br>
+  <h3>Desktop Client Software</h3>
+    <div class="table-responsive">       
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Software</th>
+            <th>Version</th>
+            <th class="center">Description</th>
+            <th class="center">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white">
+            <td class="text-center"><a href="softwareContact.html"><img src="/meanStarter/assets/img/client.png" class="proImg" alt=""></a></td>
+            <td>6.0.12.215</td>
+            <td>View, search, perform analytics, remotely and locally. <br>Face Detection | Object Tracing <br> License Plate Reading | Region of Interest(ROI)<br> &#42;Fully Supports Video Client Verion 5</td>
+            <td class="orange2"><a ng-href="/softwareContact" class="orange">S&#x2011;VIDIA Video Client Version 6</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><a ng-href="/softwareContact"><img src="/meanStarter/assets/img/multi.png" class="proImg" alt=""></a></td>
+            <td>6.0.12.193</td>
+            <td>Full control center experience.<br>Connect to an unlimited number of servers.<br> View, search, and perform analytics.</td>
+            <td class="orange2"><a ng-href="/softwareContact" class="orange">S&#x2011;VIDIA MultiClient</a></td>
+          </tr>
+          <tr class="bg-white">
+            <td class="text-center"><a href="softwareContact.html"><img src="/meanStarter/assets/img/videoserver.png" class="proImg" alt=""></a></td>
+            <td>6.0.12.420</td>
+            <td>The core of the S-VIDIA platform.<br> Can only be deployed on S&#x2011;VIDIA Video Recorders.</td>
+            <td class="orange2"><a ng-href="/softwareContact" class="orange">S&#x2011;VIDIA Video Server</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><a ng-href="/softwareContact"><img src="/meanStarter/assets/img/proxy.png" class="proImg" alt=""></a></td>
+            <td>6.0.12.12</td>
+            <td>Encode h.264 and MJPEG cameras into FDC.<br> Efficiently and securely stream video over your network.</td>
+            <td class="orange2"><a ng-href="/softwareContact" class="orange">S&#x2011;Vidia Proxy Encoder</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <br>
+    <div class="text-center">
+      <a class="btn btn-warning" role="button" ng-href="/Downloads">Back</a>
+    </div>
+  </div>
+
+ <!-- Container (Footer Section) -->
+  <div class="container-fluid text-center bg-black">
+    <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <p class="white">"The future of this compression method lies in the hands of those who demand quality, depend on accuracy and clarity of evidence, and will benefit from our endless growing catalogue of security possibilities."</p> 
+        <div class="row orange">
+          <a ng-href="/about" class="orange">About  </a>
+          <b class="white">|</b>
+          <a ng-href="/contactUs" class="orange">  Contact Us  </a>
+          <b class="white">|</b>
+          <a ng-href="/TermsAndConditions" class="orange">  Terms&amp;Conditions  </a>
+          <b class="white">|</b>
+          <a ng-href="/Privacy" class="orange">  Privacy</a>
+          <br>
+        </div>
+          <p class="white">Copyright &copy; 2017 SVIDIA LLC</p>
+      </div>
+      <div class="col-sm-1"></div>
+  </div>
+</md-content>
+
+<script type="text/javascript">
+// hide logo
+(function ($) {
+  $(document).ready(function(){
+  // fade out logo
+  $(function () {
+    $(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+      if ($(this).scrollTop() > 200) {
+        $('.hideLogo').fadeOut();
+      } else {
+        $('.hideLogo').fadeIn();
+      }
+    });
+  });
+});
+  }(jQuery));
+</script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+</body>

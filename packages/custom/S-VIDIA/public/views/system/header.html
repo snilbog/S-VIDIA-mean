@@ -1,0 +1,214 @@
+<head>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+
+<div class="md-toolbar-tools" ng-controller="HeaderController as hdrctr">
+  <div ng-controller="AdminController as vm" ng-if="hdrctr.hdrvars.isAdmin">
+    <md-icon class="material-icons ng-binding" ng-click="vm.toggleMenu()">menu</md-icon>
+  </div>
+    
+  <img src="/meanStarter/assets/img/s-logo.png" alt="" class="S-Logo">
+  <a class="pressed-text" ui-sref="home" mean-token="'site-title'" class="hideLogo">&nbsp;S&#8209;VIDIA</a>
+<div>
+
+
+<div layout="row" layout-padding layout-align="space-between center">
+  <div>
+      <md-button ng-href="/s-vidia">Home</md-button>
+  </div>
+
+  <div>
+      <md-menu md-offset="0 10">
+          <md-button md-menu-origin ng-mouseenter="$mdMenu.open()">About <i class="fa fa-angle-down"></i></md-button>
+          <md-menu-content width="3" class="bg-black" ng-mouseleave="$mdMenu.close()">
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/about">About</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/reqPerDemo">Request Personal Demo</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/liveDemo">See Live Demo</md-button>
+              </md-menu-item>
+          </md-menu-content>
+      </md-menu>
+  </div>
+  <div>
+      <md-menu md-offset="0 10">
+          <md-button md-menu-origin ng-mouseenter="$mdMenu.open()">Products <i class="fa fa-angle-down"></i></md-button>
+          <md-menu-content width="3" class="bg-black" ng-mouseleave="$mdMenu.close()">
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/Recorders">Recorders</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/Cameras">Cameras</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/DIYkits">DIY Kits</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/Software">Software</md-button>
+              </md-menu-item>
+          </md-menu-content>
+      </md-menu>
+  </div>
+  <div>
+      <md-menu md-offset="0 10">
+          <md-button md-menu-origin ng-mouseenter="$mdMenu.open()">Support <i class="fa fa-angle-down"></i></md-button>
+          <md-menu-content width="3" class="bg-black" ng-mouseleave="$mdMenu.close()">
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/contactSupport">Contact Support</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/Downloads">Downloads</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/RMA">RMA</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/FAQ">FAQ</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/WarrantyReqInfo">Warranty Information</md-button>
+              </md-menu-item>
+          </md-menu-content>
+      </md-menu>
+  </div>
+   <div>
+      <md-menu md-offset="0 10">
+          <md-button md-menu-origin ng-mouseenter="$mdMenu.open()">Company <i class="fa fa-angle-down"></i></md-button>
+          <md-menu-content width="3" class="bg-black" ng-mouseleave="$mdMenu.close()">
+              <md-menu-item>
+                  <md-button class="primary md-accent navbar-inverse" ng-href="/contactUs">Contact Us</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                  <md-button class="primary md-accent" ng-href="/investorInfo">Investor</md-button>
+              </md-menu-item>
+          </md-menu-content>
+      </md-menu>
+  </div>
+
+<md-button class="md-button" aria-label="{{item.link}}" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.main" ui-sref="{{item.link}}" mean-token="item.link">
+    {{item.title}}
+  </md-button>
+
+  <md-button class="" aria-label="Sign Up" ui-sref="auth.register" ng-if="!hdrctr.hdrvars.authenticated">
+     Join <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+  </md-button>
+  <md-button class="" aria-label="Login" ui-sref="auth.login" ng-if="!hdrctr.hdrvars.authenticated">
+    Login
+  </md-button>
+
+  <md-menu ng-if="hdrctr.hdrvars.authenticated" md-position-mode="target-right target">
+    <md-button aria-label="Account" class="md-button top-link" ng-click="$mdOpenMenu()">
+      <md-tooltip md-direction="left">Account Settings</md-tooltip>
+      <md-icon>account_box</md-icon>
+      <span id="toolbar-username">{{hdrctr.hdrvars.user.name}}</span>
+      <md-icon md-menu-origin>keyboard_arrow_down</md-icon>
+    </md-button>
+
+    <md-menu-content width="3">
+      <md-menu-item>
+        <md-button class="md-button" aria-label="Logout" ng-click="hdrctr.logout()">
+          <md-icon>exit_to_app</md-icon>
+          Logout
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+
+<!-- 
+<nav class="navbar hidden-xs">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> 
+
+ <ul class="nav navbar-nav">
+          <li><a ng-href="/s-vidia" class="md-button">Home</a></li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle md-button" data-toggle="dropdown">About
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu navbar-inverse">
+                  <li><a ng-href="/about">About</a></li>
+                  <li><a ng-href="/reqPerDemo">Request Demo</a></li>
+                  <li><a ng-href="/liveDemo">Live Demo</a></li>
+                </ul>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle md-button" data-toggle="dropdown">Products
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu navbar-inverse">
+                  <li><a ng-href="/Recorders">Recorders</a></li>
+                  <li><a ng-href="/Cameras">Cameras</a></li>
+                  <li><a ng-href="/DIYkits">DIY Kits</a></li>
+                  <li><a ng-href="/Software">Software</a></li>
+                </ul>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle md-button" data-toggle="dropdown">Support
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu navbar-inverse">
+                  <li><a href="contactSupport">Contact Support</a></li>
+                  <li><a ng-href="/Downloads">Downloads</a></li>
+                  <li><a ng-href="/RMA">RMA</a></li>
+                  <li><a ng-href="/FAQ">FAQ</a></li>
+                  <li><a ng-href="/WarrantyReqInfo">Warranty</a></li>
+                </ul>
+          </li>
+          <li class="dropdown">
+            <a href="" class="dropdown-button button" data-toggle="dropdown">Company
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu navbar-inverse">
+                  <li><a ng-href="/contactUs">Contact Us</a></li>
+                  <li><a ng-href="/investorInfo">Investor</a></li>
+                </ul>
+          </li>
+          <li><a href="#wheretobuy" class="md-button">Shop</a></li>
+          <li><a ng-href="/practice">practice</a></li>
+        </ul>
+      </nav>
+ -->
+    
+      <!-- Mobile navbar -->
+  <!-- <md-menu>
+  
+    <nav class="navbar hidden-sm hidden-md hidden-lg hidden-xl">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#company">Company</a></li>
+            <li><a href="#wheretobuy">Shop</a></li>
+          </ul>
+      </div>
+    </nav>
+
+  </md-menu> -->
+
+
+
+
+
+
+
+
+
+
+
